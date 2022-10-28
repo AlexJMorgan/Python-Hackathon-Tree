@@ -1,0 +1,12 @@
+def majority_vote(ballot):
+    """Returns majority vote from ballot"""
+    neededVotes = len(ballot)/2
+    uniqueVotes = set(ballot)
+    for vote in uniqueVotes:
+        if ballot.count(vote) >= neededVotes:
+            return vote
+    return None
+
+#print(majority_vote(["A","A","B"]))
+#print(majority_vote(["A","A","A","B","A","C"]))
+#print(majority_vote(["A","B","B","A","C","C"]))
